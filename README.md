@@ -6,6 +6,8 @@ Exercise 1:
 
 a) <br>
 It is possible to define a get(int, int) that will result in the product of the two numbers.<br>
+get(a, b) -> c<br>
+
 get(int a, int b) { <br>
     return a * b; <br>
 }
@@ -23,6 +25,8 @@ that multiplied with each other result in the same product<br>
 
 
 It is possible to define a put(int, int') that results in the product of the new numbers.<br>
+get(a, put((a, b), b')) -> get(a, b') -> c'<br>
+
 put(int a, int b) {<br>
     this.b = b; // Update stored value of b.<br>
     return a * b;<br>
@@ -30,6 +34,8 @@ put(int a, int b) {<br>
 
 It is also possible to define a put(int') that will update one of the numbers that result in the product;<br>
 but only one of the numbers would be changed, while the other has to remain the same in order to find the new value of the second number.<br>
+put(c') -> get(a, (c' / a)) -> get(a, b') -> a, b'<br>
+
 put(int c') {<br>
     this.b = c' / a;<br>
 }
@@ -37,12 +43,16 @@ put(int c') {<br>
 
 b) <br>
 It is possible to define a get(firstName, lastName) that results in the whole name.<br>
+get(firstName, lastName) -> name<br>
+
 get(String firstName, String lastName) {<br>
     return firstName + " " + lastName;<br>
 }
 
 It is possible to define a get(name) that results in firstName and lastName,<br>
 but only if the lastName is consisting of a single word.<br>
+get(name) -> firstName, lastName<br>
+
 get(name) {<br>
     String[] nameComponents = name.split(" ");<br>
     String lastName = nameComponents[nameComponents.length - 1];<br>
@@ -57,6 +67,9 @@ get(name) {<br>
 
 
 It is possible to define a put(firstName', lastName') that results in result in a new name.<br>
+get(firstName, put((firstName, lastName), lastName')) -> get(firstName, lastName') -> name'<br>
+get(put((firstName, lastName), firstName'), lastName) -> get(firstName', lastName) -> name'<br>
+
 put(String firstName, String lastName) {<br>
     this.firstName = firstName;<br>
     this.lastName = lastName;<br>
@@ -64,6 +77,8 @@ put(String firstName, String lastName) {<br>
 }
 
 It is possible to define a put(name') that result in the new first and last names.<br>
+put(name') -> get(firstName', lastName') -> firstName', lastName'<br>
+
 put(String name) {<br>
     this.name = name;<br>
     String[] nameComponents = name.split(" ");<br>
