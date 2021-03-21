@@ -126,7 +126,7 @@ put({element1, elementN, ..., element1}, element1') -> [element1', element2, ...
     set.put(5, "c");
     set.put(1, "b");
     
-    put(key, value) {
+    put(set, key, value) {
         set.put(key, value);
         List<String> listPrime = new ArrayList<>(set.values());
         for (int i = 0; i < listPrime.size(); i++) {
@@ -139,6 +139,7 @@ put({element1, elementN, ..., element1}, element1') -> [element1', element2, ...
                 }
             }
         }
+        return listPrime;
     }
 
 
@@ -148,13 +149,19 @@ unless the operation happens to make the last non-unique element in the list uni
 
 
 
-Exercise 2:
+Exercise 2: <br>
+
+I would propose using an asymmetric lens, because while updating the attributes between the two models is fine,<br>
+we cannot without further information, restore the operations in the class model, since that information is not kept in the data model.<br>
+
+get(classModel) -> dataModel<br>
+get(dataModel) -> classModel<br>
+
+put(classModel, classModel') -> classModel'<br>
+put(dataModel, dataModel') -> dataModel'<br>
 
 
-
-
-
-Exercise 3:
+Exercise 3: <br>
 
 
 a) <br>
@@ -164,7 +171,7 @@ b) <br>
 
 
 
-Exercise 4:
+Exercise 4: <br>
 
 a) <br>
 
@@ -173,7 +180,7 @@ b) <br>
 c) <br>
 
 
-Exercise 5:
+Exercise 5: <br>
 
 a) <br>
 
