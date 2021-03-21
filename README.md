@@ -4,7 +4,7 @@
 
 Exercise 1:
 
-a) 
+a) <br>
 It is possible to define a get(int, int) that will result in the product of the two numbers.<br>
 get(int a, int b) { <br>
     return a * b; <br>
@@ -35,7 +35,7 @@ put(int c') {<br>
 }
 
 
-b) 
+b) <br>
 It is possible to define a get(firstName, lastName) that results in the whole name.<br>
 get(String firstName, String lastName) {<br>
     return firstName + " " + lastName;<br>
@@ -45,14 +45,24 @@ It is possible to define a get(name) that results in firstName and lastName,<br>
 but only if the lastName is consisting of a single word.<br>
 get(name) {<br>
     String[] nameComponents = name.split(" ");<br>
-    return nameComponents[nameComponents.length - 1];<br>
+    String lastName = nameComponents[nameComponents.length - 1];<br>
+    String firstName = "";<br>
+    for (int i = 0; i < nameComponents.length - 1; i++) {<br>
+        firstName += nameComponents[i] + " ";<br>
+    }<br>
+    firstName = firstName.strip();<br>
+    String[] names = {firstName, lastName};<br>
+    return names;<br>
 }
 
 
 
 
 
-c) 
+
+
+
+c) <br>
 
 
 
@@ -66,27 +76,27 @@ Exercise 2:
 Exercise 3:
 
 
-a) 
+a) <br>
 
-b)
+b) <br>
 
 
 
 
 Exercise 4:
 
-a) 
+a) <br>
 
-b) 
+b) <br>
 
-c) 
+c) <br>
 
 
 Exercise 5:
 
-a)
+a) <br>
 
-b)
+b) <br>
 
 
 
