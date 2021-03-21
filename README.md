@@ -157,8 +157,8 @@ we cannot without further information, restore the operations in the class model
 get(classModel) -> dataModel<br>
 get(dataModel) -> classModel<br>
 
-put(classModel, classModel') -> classModel'<br>
-put(dataModel, dataModel') -> dataModel'<br>
+get(put((classModel, attribute), attribute')) -> get(classModel') -> dataModel'<br>
+get(put((dataModel, attribute), attribute')) -> get(dataModel') -> classModel'<br>
 
 
 Exercise 3: <br>
