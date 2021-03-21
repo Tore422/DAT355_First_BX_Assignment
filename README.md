@@ -28,14 +28,25 @@ put(int a, int b) {<br>
     return a * b;<br>
 }
 
-It is also possible to define a put(int') that will update one of the numbers that result in the product,<br>
+It is also possible to define a put(int') that will update one of the numbers that result in the product;<br>
 but only one of the numbers would be changed, while the other has to remain the same in order to find the new value of the second number.<br>
 put(int c') {<br>
     this.b = c' / a;
 }
 
-b) 
 
+b) 
+It is possible to define a get(firstName, lastName) that results in the whole name.<br>
+get(String firstName, String lastName) {<br>
+    return firstName + " " + lastName;<br>
+}
+
+It is possible to define a get(name) that results in firstName and lastName,<br>
+but only if the lastName is consisting of a single word.<br>
+get(name) {<br>
+    String[] nameComponents = name.split(" ");<br>
+    return nameComponents[nameComponents.length - 1];<br>
+}
 
 
 
