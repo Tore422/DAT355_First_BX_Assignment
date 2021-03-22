@@ -228,6 +228,15 @@ Exercise 4: <br>
 
 a) <br>
 
+The get(X, Y) function will result in the intersection of the two given sets.<br>
+The put((X, Y), Z') function will result in a pair (what is in modified set Z' and (what is in X but not in Y),<br>
+what is in modified set Z' and in set Y)<br>
+
+Asymmetrically distributed if possible to go back and forth, but loosing information during transformation,<br>
+that is not easily recoverable without external help.<br>
+
+
+
 
 
 
