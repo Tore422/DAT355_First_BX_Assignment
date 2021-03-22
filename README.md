@@ -263,11 +263,15 @@ Z' U (X - Y) = {1,4,7,8,9}<br>
 
 
 
-The lens is hyppocratic, because it 
+The lens is hyppocratic, because it fulfills the criteria from slide 47.<br>
+The pair ((X,Y), Z) is part of the consistency relation,<br>
+and put((X, Y), get(X,Y)) = put((X, Y), Z) = (Z U (X - Y), Z U Y) = (X, Y)<br>
 
-
-
-
+For example, with sets: X = {1,2,3,4}, Y = {2,3,5,6}, Z = get(X,Y) = X intersection Y = {2,3}<br>
+put(({1,2,3,4}, {2,3,5,6}), get({1,2,3,4}, {2,3,5,6})) = <br>
+put(({1,2,3,4}, {2,3,5,6}), {2,3}) = <br>
+({2,3} U {1,4}, {2,3} U {2,3,5,6}) = <br>
+({1,2,3,4}, {2,3,5,6}) = (X, Y) = s<br>
 
 
 c) <br>
