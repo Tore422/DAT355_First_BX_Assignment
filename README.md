@@ -213,18 +213,23 @@ Then perform the outer forward repair on the unmodified model A1 and the modifie
 Resulting in a consistent model A2.<br>
 
 
+In the composer example from slide 40, if given an update from A1 -> A1', we get a consistent pair A1' and A2'.<br>
+If we then were to apply an update A1' -> A1, we would get a consistent model pair A1 and A2,<br>
+which are in correspondance with the given equation for this task.<br>
 
-
-
-
-
-
-
+The model would add to the list all elements in the modified set that are not already there,<br>
+and delete all elements in the list, not present in the modified set; giving a consistent pair A1' and A2'.<br>
+If we then re-add the deleted elements to the list and remove those added in the first update,<br>
+and perform the same add and remove operations as before to the set,<br>
+we would get back the consisitent pair A1 and A2 that we started with.<br>
 
 
 Exercise 4: <br>
 
 a) <br>
+
+
+
 
 b) <br>
 
