@@ -228,19 +228,23 @@ Exercise 4: <br>
 
 a) <br>
 
+From slide 30:<br>
+Asymmetric if easy to go from one model to the other, but by doing so we loose information,<br>
+preventing us from going back without external help.
+
 The get(X, Y) function will result in the intersection of the two given sets.<br>
-The put((X, Y), Z') function will result in a pair (what is in modified set Z' and (what is in X but not in Y),<br>
-what is in modified set Z' and in set Y)<br>
+Going from the source to the view is therefore rather easy, but going from the view and back to the source directly,<br>
+becomes impossible, as we only have the values that appear in both X and Y, while the rest of the information was lost in the transformation.<br>
 
-Asymmetrically distributed if possible to go back and forth, but loosing information during transformation,<br>
-that is not easily recoverable without external help.<br>
-
-
-
-
+The put((X, Y), Z') function will result in a pair (What is in both Z' and (what is in X, but not in Y), what is in Z' and in Y).<br>
+Applying a change to the view Z, will modify the source pair (X, Y),<br>
+and result in a modified source pair (values in only X and Z', values in Y and Z').<br>
 
 
 b) <br>
+
+
+
 
 c) <br>
 
