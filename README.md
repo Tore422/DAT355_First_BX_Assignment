@@ -276,6 +276,38 @@ put(({1,2,3,4}, {2,3,5,6}), {2,3}) = <br>
 
 c) <br>
 
+Asking, is the lens history ignorant, is equivalent to asking if put(put(s0, v1), v2) = put(s0, v2)?<br>
+In this case, is put(put((X, Y), Z'), Z'') = put((X, Y), Z'')?<br>
+
+put(put((X, Y), Z'), Z'') = <br>
+put((Z' U (X - Y), Z' U Y), Z'') = <br>
+(Z'' U ((Z' U (X - Y)) - (Z' U Y)), Z'' U (Z' U Y)) = <br>
+(Z'' U (X' - Y'), Z'' U Y')<br>
+
+put((X, Y), Z'') = <br>
+(Z'' U (X - Y), Z'' U Y) not the same as (Z'' U (X' - Y'), Z'' U Y').<br>
+
+
+Example with sets: X = {1,2,3,4}, Y = {2,3,5,6}, Z' = {7,8,9}, Z'' = {10,11,12}<br>
+
+put(put(({1,2,3,4}, {2,3,5,6}), {7,8,9}), {10,11,12}) = <br>
+put(({7,8,9} U ({1,2,3,4} - {2,3,5,6}), {7,8,9} U {2,3,5,6}), {10,11,12}) = <br>
+put(({7,8,9} U {1,4}, {2,3,5,6,7,8,9}), {10,11,12}) = <br>
+put(({1,4,7,8,9}, {2,3,5,6,7,8,9}), {10,11,12}) = <br>
+({10,11,12} U ({1,4,7,8,9} - {2,3,5,6,7,8,9}), {10,11,12} U {2,3,5,6,7,8,9}) = <br>
+({10,11,12} U {1,4}, {2,3,5,6,7,8,9,10,11,12}) = <br>
+({1,4,10,11,12}, {2,3,5,6,7,8,9,10,11,12})<br>
+
+
+put(({1,2,3,4}, {2,3,5,6}), {10,11,12}) = <br>
+({10,11,12} U ({1,2,3,4} - {2,3,5,6}), {10,11,12} U {2,3,5,6}) = <br>
+({10,11,12} U {1,4}, {2,3,5,6,10,11,12}) = <br>
+({1,4,10,11,12}, {2,3,5,6,10,11,12}) = <br>
+
+
+Unless the elements from Z' are included in Z'', the result we would get would differ.<br>
+The equation is therefore not history ignorant.<br>
+
 
 Exercise 5: <br>
 
