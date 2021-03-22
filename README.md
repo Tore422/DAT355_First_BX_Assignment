@@ -166,6 +166,38 @@ Exercise 3: <br>
 
 a) <br>
 
+By the definition of correctness on slide 42, having a modified model A1' or A2',<br>
+using a forward or backwards restoration must result in a model pair that are consistent.<br>
+
+For the forward restoration function, we need to prove that by giving a modified model A1' and an unmodified model A2,<br>
+the result will be a model that are consistent with model A1'.<br>
+Likewise for the backwards restoration function, where the result of giving an unmodified model A1 and a modified model A2',<br>
+is a model A1' that is consistent with A2'.<br>
+
+The forward restoration function on slide 40, is implemented by taking a modified model A1',<br>
+and an unmodified model A2, and for each object in A1', if such an object does not exist in A2,<br>
+we construct one and add it to A2.<br>
+For each object in A2, if such an object does not exist in A1', it is deleted from A2.<br>
+The result is two models that have the same set of (name, nationality) pairs, and are therefore consistent according to the red box on slide 40.<br>
+
+The backwards restoration function would likewise take a modified model A2',<br>
+and an unmodified model A1, and add each object in A2' (not already present) to A1,<br>
+and delete each object in A1 that is not present in A2'.<br>
+The result is likewise two consistent models with the same set of (name, nationality) pairs.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 b) <br>
 
 
@@ -187,6 +219,14 @@ a) <br>
 b) <br>
 
 
+
+
+
+
+
+
+I am not entirely sure if I undeerstood exercise 2 correctly,<br>
+so please let me know if I did something wrong.<br>
 
 
 
