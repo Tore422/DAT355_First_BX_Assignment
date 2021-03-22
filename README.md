@@ -202,6 +202,23 @@ Conclusion: the restoration functions are both correct and hippocratic.<br>
 
 b) <br>
 
+The equation says, that given an update from A1 to A1' and an update from A1' to A1,<br>
+we should get the original model A2 which is consistent with A1.<br>
+In other words, making an update to a model, and then changing the model back to how it was,<br>
+should result in the same consistent model pair.<br>
+
+First perform the inner forward repair on modified model A1' and A2.<br>
+Resulting in two consistent models A1' and A2'.<br>
+Then perform the outer forward repair on the unmodified model A1 and the modified model A2'.<br>
+Resulting in a consistent model A2.<br>
+
+
+
+
+
+
+
+
 
 
 
