@@ -234,7 +234,8 @@ preventing us from going back without external help.
 
 The get(X, Y) function will result in the intersection of the two given sets.<br>
 Going from the source to the view is therefore rather easy, but going from the view and back to the source directly,<br>
-becomes impossible, as we only have the values that appear in both X and Y, while the rest of the information was lost in the transformation.<br>
+becomes impossible, as we only have the values that appear in both X and Y,<br>
+while the rest of the information was lost in the transformation.<br>
 
 The put((X, Y), Z') function will result in a pair (What is in both Z' and (what is in X, but not in Y), what is in Z' and in Y).<br>
 Applying a change to the view Z, will modify the source pair (X, Y),<br>
@@ -242,6 +243,29 @@ and result in a modified source pair (values in only X and Z', values in Y and Z
 
 
 b) <br>
+
+The lens is correct, because it fulfills the criteria from slide 47.<br>
+The set of all pairs ((X, Y), get(X, Y)) are elements in the consistentency relation;<br>
+and get(put((X, Y), Z')) = get((Z' U (X - Y), Z' U Y)) = ((Z' U (X - Y)) intersection (Z' U Y))<br>
+= Z' = the modified view v from put(s,v)<br>
+
+For example, with sets: X = {1,2,3,4}, Y = {2,3,5,6}, Z' = {7,8,9}<br>
+get(put(({1,2,3,4}, {2,3,5,6}), {7,8,9})) = <br>
+get({1,4,7,8,9}, {2,3,5,6,7,8,9}) = <br>
+{7,8,9} = Z'<br>
+
+
+Y U Z' = {2,3,5,6,7,8,9}<br>
+X - Y = {1,4}<br>
+Z' U (X - Y) = {1,4,7,8,9}<br>
+((Z' U (X - Y)) intersection (Z' U Y)) = <br>
+{1,4,7,8,9} intersection {2,3,5,6,7,8,9} = {7,8,9} = Z'<br>
+
+
+
+The lens is hyppocratic, because it 
+
+
 
 
 
