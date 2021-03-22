@@ -166,6 +166,8 @@ Exercise 3: <br>
 
 a) <br>
 
+Correctness<br>
+
 By the definition of correctness on slide 42, having a modified model A1' or A2',<br>
 using a forward or backwards restoration must result in a model pair that are consistent.<br>
 
@@ -186,16 +188,16 @@ and delete each object in A1 that is not present in A2'.<br>
 The result is likewise two consistent models with the same set of (name, nationality) pairs.<br>
 
 
+Hippocraticness<br>
 
+From the definition of hippocraticness on slide 42, we have that a restoration function is hippocratic,<br>
+if given a pair of consistent models, it will leave the same unmodified pair of consistent models.<br>
 
+For the forward and backwards restoration functions, if given a pair of unmodified, consitent models,<br>
+there would be no (name, nationality) pair in one model that is not already in the other,<br>
+therefore no changes will be made, as it only adds or deletes objects that are not present in the other model.<br>
 
-
-
-
-
-
-
-
+Conclusion: the restoration functions are both correct and hippocratic.<br>
 
 
 b) <br>
