@@ -322,13 +322,25 @@ put(((name, nationality), yob), (name', nationality')) = <br>
 
 b) <br>
 
+In the EMF case, the get(v,c) function would take the generated and manually written code,<br>
+and return a class model;<br>
+the put((v,c),v') function would take the generated and manually written code,<br>
+and apply the modified class model to update the existing code.<br>
+The manual changes are kept seperate in the set C,<br>
+and are therefore protected from change when the code is updated.<br>
+
+In this case, history ignorance means we can apply a change in the class model and update the code,<br>
+while still retaining a consistent relation between the code and the model;<br>
+as the code is generated to reflect the current class model, making any previous/intermediary changes irrelevant,<br>
+and the manually written code is kept separate, so it is not affected by the model and code changes.<br>
+
+Any syntax errors are not prevented when using the put() function, as the manually written code <br>
+is protected from overwrite, and the class model itself is not protected from errors,<br>
+making it somewhat problematic to use without external validation tools.<br>
 
 
 
 
-
-
-
-I am not entirely sure if I undeerstood exercise 2 correctly,<br>
+I am not entirely sure if I understood exercise 2 correctly,<br>
 so please let me know if I did something wrong.<br>
 
