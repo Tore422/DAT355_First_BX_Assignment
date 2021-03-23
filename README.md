@@ -313,6 +313,13 @@ Exercise 5: <br>
 
 a) <br>
 
+Yes, a constant decomposition complement of M1 into M2 and C is possible.<br>
+
+For example:<br>
+put(((name, nationality), yob), (name', nationality')) = <br>
+((name', nationality'), yob)<br>
+
+
 b) <br>
 
 
@@ -324,8 +331,4 @@ b) <br>
 
 I am not entirely sure if I undeerstood exercise 2 correctly,<br>
 so please let me know if I did something wrong.<br>
-
-
-
-
 
