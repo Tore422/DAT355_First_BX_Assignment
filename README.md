@@ -160,6 +160,7 @@ get(dataModel) -> classModel<br>
 get(put((classModel, attribute), attribute')) -> get(classModel') -> dataModel'<br>
 get(put((dataModel, attribute), attribute')) -> get(dataModel') -> classModel'<br>
 
+I still do not understand this task.<br>
 
 Exercise 3: <br>
 
@@ -313,11 +314,18 @@ Exercise 5: <br>
 
 a) <br>
 
-Yes, a constant decomposition complement of M1 into M2 and C is possible.<br>
+In order for an asymmetric lens to be called a constant complement, it must be history ignorant.<br>
 
-For example:<br>
-put(((name, nationality), yob), (name', nationality')) = <br>
-((name', nationality'), yob)<br>
+In the case of the composer example on slide 52.<br>
+If the lens removes an object from M1, and get an entry in M2 and a complement C,<br>
+the only information we would have retained is the name and nationality, as that information is kept in M2.<br>
+When doing a second transformation that tries to add a removed element back into M1,<br>
+we might not be able to restore the models consistency, as the year of birth information <br>
+has been lost or not depending on the order of the updates.<br>
+
+The lens is not history ignorant, and it is therefore not possible for it to be <br>
+a constant complement decomposition of M1 into M2 and a complement C.<br>
+
 
 
 b) <br>
