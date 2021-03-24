@@ -151,17 +151,19 @@ unless the operation happens to make the last non-unique element in the list uni
 
 Exercise 2: <br>
 
-I would propose using an asymmetric lens, because while updating the attributes between the two models is fine,<br>
-we cannot without further information, restore the operations in the class model, since that information is not kept in the data model.<br>
+I would propose using a symmetric lens, as both meta-models from slide 32<br>
+contain private information not known to the other class.<br>
 
-get(classModel) -> dataModel<br>
+Forward Restoration(classModel', dataModel) -> dataModel'<br>
 
-We map the class to a linking table, as per the relational mapping stated in the exercise desciption;<br>
-and then set the typeKey in Tab_A, to the id that will reference the class.<br>
+The updated class model is mapped to a data model representation, as per the relational mapping stated in the exercise description;<br>
+and in addition we set the typeKey in Tab_A, to the id that will reference the class.<br>
 
 
-put(classModel, datamodel') -> classModel'<br>
+Backwards Restoration(classModel, dataModel') -> classModel'<br>
 
+The changes in the data model are mapped to the class model.<br>
+Each row in Tab_A is mapped to a class with attributes and a relation to the super class.<br>
 
 
 
