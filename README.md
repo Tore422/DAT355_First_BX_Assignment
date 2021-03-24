@@ -155,12 +155,17 @@ I would propose using an asymmetric lens, because while updating the attributes 
 we cannot without further information, restore the operations in the class model, since that information is not kept in the data model.<br>
 
 get(classModel) -> dataModel<br>
-get(dataModel) -> classModel<br>
 
-get(put((classModel, attribute), attribute')) -> get(classModel') -> dataModel'<br>
-get(put((dataModel, attribute), attribute')) -> get(dataModel') -> classModel'<br>
+We map the class to a linking table, as per the relational mapping stated in the exercise desciption;<br>
+and then set the typeKey in Tab_A, to the id that will reference the class.<br>
 
-I still do not understand this task.<br>
+
+put(classModel, datamodel') -> classModel'<br>
+
+
+
+
+
 
 Exercise 3: <br>
 
@@ -347,8 +352,4 @@ is protected from overwrite, and the class model itself is not protected from er
 making it somewhat problematic to use without external validation tools.<br>
 
 
-
-
-I am not entirely sure if I understood exercise 2 correctly,<br>
-so please let me know if I did something wrong.<br>
 
